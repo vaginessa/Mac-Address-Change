@@ -1,6 +1,5 @@
 package hom.ourhome.macaddresschange;
 
-
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,24 +8,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.stericson.rootshell.RootShell;
-import com.stericson.rootshell.exceptions.RootDeniedException;
-import com.stericson.rootshell.execution.Command;
+import com.stericson.RootShell.RootShell;
+import com.stericson.RootShell.exceptions.RootDeniedException;
+import com.stericson.RootShell.execution.Command;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
-
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class Fab0Fragment extends Fragment {
-
-
     public Fab0Fragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,6 +32,8 @@ public class Fab0Fragment extends Fragment {
         fab0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Snackbar.make(view, "Replace fab0 with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
                 Command command = new Command(0,
                         "busybox ifconfig wlan0 down",
                         "echo Shutdown the wlan0 adapter: DONE",
@@ -58,8 +55,6 @@ public class Fab0Fragment extends Fragment {
                 } catch (RootDeniedException e) {
                     e.printStackTrace();
                 }
-                Snackbar.make(view, "Replace fab0 with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
             }
         });
         return view;

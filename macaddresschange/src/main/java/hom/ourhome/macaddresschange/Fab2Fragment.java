@@ -1,6 +1,5 @@
 package hom.ourhome.macaddresschange;
 
-
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,18 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import hom.ourhome.macaddresschange.R;
-
 /**
  * A simple {@link Fragment} subclass.
  */
 public class Fab2Fragment extends Fragment {
-
-
     public Fab2Fragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,10 +25,10 @@ public class Fab2Fragment extends Fragment {
         fab2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                android.os.Process.killProcess(android.os.Process.myPid());
-                System.exit(0);
                 Snackbar.make(view, "Replace fab2 with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                android.os.Process.killProcess(android.os.Process.myPid());
+                System.exit(0);
             }
         });
         return view;

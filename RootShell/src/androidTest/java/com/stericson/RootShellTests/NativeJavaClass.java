@@ -1,6 +1,6 @@
-package com.stericson.rootshell;
+package com.stericson.RootShellTests;
 
-import com.stericson.rootshell.containers.RootClass;
+import com.stericson.RootShell.containers.RootClass;
 
 import java.io.BufferedWriter;
 import java.io.File;

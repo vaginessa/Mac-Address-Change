@@ -20,7 +20,7 @@
  * limitations under that License.
  */
 
-package com.stericson.rootshell;
+package com.stericson.RootShellTests;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -32,9 +32,10 @@ import android.os.StrictMode;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.stericson.rootshell.exceptions.RootDeniedException;
-import com.stericson.rootshell.execution.Command;
-import com.stericson.rootshell.execution.Shell;
+import com.stericson.RootShell.RootShell;
+import com.stericson.RootShell.exceptions.RootDeniedException;
+import com.stericson.RootShell.execution.Command;
+import com.stericson.RootShell.execution.Shell;
 
 import java.io.IOException;
 import java.util.List;
@@ -266,7 +267,7 @@ public class SanityCheckRootShell extends Activity {
 
                     @Override
                     public void commandTerminated(int id, String reason) {
-                        synchronized (SanityCheckRootShell.this) {
+                        synchronized (com.stericson.RootShellTests.SanityCheckRootShell.this) {
 
                             _catch = true;
                             visualUpdate(TestHandler.ACTION_PDISPLAY, "All tests complete.");
@@ -284,7 +285,7 @@ public class SanityCheckRootShell extends Activity {
 
                     @Override
                     public void commandCompleted(int id, int exitCode) {
-                        synchronized (SanityCheckRootShell.this) {
+                        synchronized (com.stericson.RootShellTests.SanityCheckRootShell.this) {
                             _catch = true;
 
                             visualUpdate(TestHandler.ACTION_PDISPLAY, "All tests complete.");

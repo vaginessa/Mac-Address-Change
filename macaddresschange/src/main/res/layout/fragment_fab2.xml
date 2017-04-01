@@ -21,7 +21,6 @@
         android:layout_height="wrap_content"
         android:text="@string/fab2text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="@+id/fab2"
-        app:layout_constraintLeft_toLeftOf="@+id/fab2" />
-
+        app:layout_constraintLeft_toLeftOf="@+id/fab2"
+        app:layout_constraintRight_toRightOf="@+id/fab2" />
 </android.support.constraint.ConstraintLayout>
